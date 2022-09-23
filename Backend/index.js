@@ -6,11 +6,8 @@ const morgan= require("morgan");
 const connectToMongo = require("./db");
 const cors= require("cors")
 
-
-
 dotenv.config();
 connectToMongo();
-
 
 //middleware
 app.use(express.json());
