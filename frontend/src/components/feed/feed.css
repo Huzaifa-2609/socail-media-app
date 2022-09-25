@@ -1,0 +1,4 @@
+.feed{
+    flex:6;
+    height: calc(100vh - 50px);
+}
