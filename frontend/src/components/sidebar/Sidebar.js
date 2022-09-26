@@ -1,6 +1,7 @@
-import { Bookmark, EmojiEvents, Groups, Message, OndemandVideo, QuestionAnswer, RssFeed, Work } from '@mui/icons-material'
+import { Bookmark,  Groups, Message, OndemandVideo, QuestionAnswer, RssFeed, School, Work } from '@mui/icons-material'
 import React from 'react'
 import "./sidebar.css"
+import EventIcon from '@mui/icons-material/Event';
 const Sidebar = () => {
   return (
     <div className='sidebar'>
@@ -12,47 +13,89 @@ const Sidebar = () => {
                 Feed
               </span>
             </li>
-            <li>  
-              <Message className='sidebaricon'/>
+            <li className="sidebarListItem"> 
+              <Message className='sidebarIcon'/>
               <span className="sidebarListItemText">
                 Chats
               </span>
             </li>
-            <li> 
-              <OndemandVideo/>
+            <li className="sidebarListItem">
+              <OndemandVideo className="sidebarIcon"/>
               <span className="sidebarListItemText">
                 Videos
               </span>
             </li> 
-            <li> 
-            <Groups/>
+            <li className="sidebarListItem">
+            <Groups className="sidebarIcon"/>
               <span className="sidebarListItemText">
                 Groups
               </span>
             </li> 
-            <li> 
-            <QuestionAnswer/>
+            <li className="sidebarListItem">
+            <QuestionAnswer className="sidebarIcon"/>
               <span className="sidebarListItemText">
                 Questions
               </span>
             </li> 
-            <li> 
-            <Bookmark/>
+            <li className="sidebarListItem">
+            <Bookmark className="sidebarIcon"/>
               <span className="sidebarListItemText">
                 Bookmarks
               </span>
             </li> 
-            <li> 
-            <Work/>
+            <li className="sidebarListItem">
+            <Work className="sidebarIcon"/>
               <span className="sidebarListItemText">
                 Jobs
               </span>
             </li> 
-            <li> 
-            <EmojiEvents/>
+            <li className="sidebarListItem">
+            <EventIcon className="sidebarIcon"/>
               <span className="sidebarListItemText">
                 Event
               </span>
+            </li>
+            <li className="sidebarListItem">
+              <School className="sidebarIcon"/>
+              <span className="sidebarListItemText">
+                Courses
+              </span>
+            </li>
+          </ul>
+          <button className="sidebarButton">Show more</button>
+          <hr className='sidebarHr'/>
+          <ul className="sidebarFriendList">
+            <li className="sidebarFriend">
+              <img src="/assets/person/2.jpg" alt="" className="sidebarFriendImg" />
+              <span className="userName">Micheal Clarke</span>
+            </li>
+            <li className="sidebarFriend">
+              <img src="/assets/person/2.jpg" alt="" className="sidebarFriendImg" />
+              <span className="userName">Micheal Clarke</span>
+            </li>
+            <li className="sidebarFriend">
+              <img src="/assets/person/2.jpg" alt="" className="sidebarFriendImg" />
+              <span className="userName">Micheal Clarke</span>
+            </li>
+            <li className="sidebarFriend">
+              <img src="/assets/person/2.jpg" alt="" className="sidebarFriendImg" />
+              <span className="userName">Micheal Clarke</span>
+            </li>
+            <li className="sidebarFriend">
+              <img src="/assets/person/2.jpg" alt="" className="sidebarFriendImg" />
+              <span className="userName">Micheal Clarke</span>
+            </li>
+            <li className="sidebarFriend">
+              <img src="/assets/person/2.jpg" alt="" className="sidebarFriendImg" />
+              <span className="userName">Micheal Clarke</span>
+            </li>
+            <li className="sidebarFriend">
+              <img src="/assets/person/2.jpg" alt="" className="sidebarFriendImg" />
+              <span className="userName">Micheal Clarke</span>
+            </li>
+            <li className="sidebarFriend">
+              <img src="/assets/person/2.jpg" alt="" className="sidebarFriendImg" />
+              <span className="userName">Micheal Clarke</span>
             </li>
           </ul>
         </div>
