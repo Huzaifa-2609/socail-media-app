@@ -1,21 +1,25 @@
 .sidebar{
     flex:3.0;
     height: calc(100vh - 50px);
-    overflow: hidden;
-    position: sticky;
-}
-.sidebar:hover{
     overflow-y: scroll;
+    position: sticky;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
-::-webkit-scrollbar{
-    width: 5px;
+.sidebar::-webkit-scrollbar{
+    width: 7px;
 }
-::-webkit-scrollbar-track{
+.sidebar::-webkit-scrollbar-track{
     background-color:rgb(243, 235, 225);
 }
-::-webkit-scrollbar-thumb{
+.sidebar::-webkit-scrollbar-thumb{
     background-color: rgb(167, 160, 160);
+    border-radius: 12px;
 }
+
+
 .sidebarWrapper{
     padding: 20px;
 }

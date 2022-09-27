@@ -1,8 +1,11 @@
 .feed{
     flex:6;
-    height: calc(100vh - 50px);
+    /* height: calc(100vh - 50px); */
+    height: fit-content;
 }
+
 .feedWrapper{
     padding: 20px;
+    margin:  0px 20px ;
 }
 
