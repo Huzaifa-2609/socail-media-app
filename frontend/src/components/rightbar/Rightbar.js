@@ -85,7 +85,8 @@ const Rightbar = ({ profile }) => {
   return (
     <div className="rightbar">
       <div className="rightbarWrapper">
-        <ProfileRightBar />
+        {/* <ProfileRightBar /> */}
+        <HomeRightBar/>
       </div>
     </div>
   );
