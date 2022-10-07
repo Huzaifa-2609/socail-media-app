@@ -3,11 +3,13 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import "./post.css"
 import {format} from "timeago.js"
+import {Link} from "react-router-dom"
 const Post = ({post}) => {
   const [like, setLike] = useState(post.likes.length);
   const [isLiked, setIsLiked] = useState(false); 
   const [user, setUser] = useState({}); 
   const PF=process.env.REACT_APP_PUBLIC_FOLDER;
+
   const likeHandler=()=>{
    setIsLiked(!isLiked);
     setLike(!isLiked ? like+1: like-1)
@@ -24,7 +26,9 @@ const fetchUser=async()=>{
         <div className="postWrapper">
             <div className="postTop">
                 <div className="postTopLeft">
+                    <Link to={`/profile/${user.username}`}>
                     <img src={user.profilePicture || PF+"/person/default-user.png"} alt="" className="postProfilePic" />
+                    </Link>
                     <span className="postUsername">{user.username}</span>
                     <span className="postDate">{format(post.createdAt)}</span>
                 </div>

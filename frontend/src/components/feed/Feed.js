@@ -5,13 +5,13 @@ import "./feed.css";
 import axios from "axios"
 
 
-const Feed = () => {  
+const Feed = ({username}) => {  
 const [post, setPost] = useState([]);
 
 
 useEffect(() => {
   const fetchData= async ()=>{
-      const res = await axios.get("posts/timeline/633c5228c7fc200ff65ff430");
+      const res =  await axios.get("posts/timeline/633c5228c7fc200ff65ff430");
       setPost(res.data)
       console.log(post)
       // console.log(res?.data)
