@@ -16,7 +16,7 @@ const Post = ({post}) => {
   } 
 useEffect(() => {
 const fetchUser=async()=>{
-    const res= await axios.get(`users/${post.userId}`);
+    const res= await axios.get(`/users?userId=${post.userId}`);
       setUser(res.data)
     }
     fetchUser();
@@ -37,13 +37,13 @@ const fetchUser=async()=>{
                 </div>
             </div>
             <div className="postCenter">
-                <span className="postText">{post?.desc}</span>
+                <span className="postText">{post.desc}</span>
                 <img src={PF+post?.img} alt="" className="postImg" />
             </div>
             <div className="postBottom">
                 <div className="postBottomLeft">
-                    <img src={"./assets/reacts/like.png"} onClick={likeHandler} alt="" className="likeIcon" />
-                    <img src={"./assets/reacts/love.png"} onClick={likeHandler} alt="" className="likeIcon" />
+                    <img src={PF+"/reacts/like.png"} onClick={likeHandler} alt="" className="likeIcon" />
+                    <img src={PF+"/reacts/love.png"} onClick={likeHandler} alt="" className="likeIcon" />
                     <span  className="postLikeCounter">{like} reactions</span>
                 </div>
                 <div className="postBottomRight">
