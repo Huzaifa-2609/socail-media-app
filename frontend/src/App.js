@@ -5,20 +5,24 @@ import Register from "./pages/register/Register";
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+  Navigate
 } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "./Context/AuthContext";
 
 
 
 function App() {
+  const {user} = useContext(AuthContext)
   return (
     <div>
       <Router>
       <Routes>
-      <Route exact path="/" element={<Home/>}/>
-      <Route exact path="/register" element={ <Register/>}/>
+      <Route exact path="/" element={user?<Home/>:<Register/>}/>
+      <Route exact path="/register" element={user?<Navigate to={"/"} replace/> : <Register/>}/>
       <Route exact path="/profile/:username" element={<Profile/>}/>
-      <Route exact path="/login" element={<Login/>}/>
+      <Route exact path="/login" element={user?<Navigate to={"/"}  replace/> :<Login/>}/>
       </Routes>
       </Router>
     </div>

@@ -1,6 +1,18 @@
+import { useRef } from "react";
 import "./register.css";
 
 export default function Register() {
+  const username= useRef();
+  const email= useRef();
+  const password= useRef();
+  const Apassword= useRef();
+
+  const handleClick=(e)=>{
+    e.preventDefault();
+    if(password.current.value!==Apassword.current.value){
+      password.current.setCustomValidity("Passwords don't match")
+    }
+  }
   return (
     <div className="login">
       <div className="loginWrapper">
@@ -11,16 +23,16 @@ export default function Register() {
           </span>
         </div>
         <div className="loginRight">
-          <div className="loginBox">
-            <input placeholder="Username" className="loginInput" />
-            <input placeholder="Email" className="loginInput" />
-            <input placeholder="Password" className="loginInput" />
-            <input placeholder="Password Again" className="loginInput" />
+          <form className="loginBox" onSubmit={handleClick}>
+            <input placeholder="Username" ref={username} required minLength={3} className="loginInput" />
+            <input placeholder="Email" type="email" ref={email} required minLength={3}  className="loginInput" />
+            <input placeholder="Password"  type="password" ref={password} required minLength={3} className="loginInput" />
+            <input placeholder="Password Again" type="password" required minLength={3} ref={Apassword} className="loginInput" />
             <button className="loginButton">Sign Up</button>
             <button className="loginRegisterButton">
               Log into Account
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </div>
