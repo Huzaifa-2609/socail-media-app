@@ -43,37 +43,37 @@ const Rightbar = ({ user }) => {
           <h4 className="rightbarInfoTitle">User Friends</h4>
           <div className="rightbarFollowings">
               <div className="rightbarFollowing">
-                <img src={PF+"/person/1.jpg"} alt="" className="rightbarFollowingImg" />
+                <img src={PF+"person/1.jpg"} alt="" className="rightbarFollowingImg" />
                 <span className="rightbarFollowingName">
                   John Carter
                 </span>
               </div>
               <div className="rightbarFollowing">
-                <img src={PF+"/person/1.jpg"} alt="" className="rightbarFollowingImg" />
+                <img src={PF+"person/1.jpg"} alt="" className="rightbarFollowingImg" />
                 <span className="rightbarFollowingName">
                   John Carter
                 </span>
               </div>
               <div className="rightbarFollowing">
-                <img src={PF+"/person/1.jpg"} alt="" className="rightbarFollowingImg" />
+                <img src={PF+"person/1.jpg"} alt="" className="rightbarFollowingImg" />
                 <span className="rightbarFollowingName">
                   John Carter
                 </span>
               </div>
               <div className="rightbarFollowing">
-                <img src={PF+"/person/1.jpg"} alt="" className="rightbarFollowingImg" />
+                <img src={PF+"person/1.jpg"} alt="" className="rightbarFollowingImg" />
                 <span className="rightbarFollowingName">
                   John Carter
                 </span>
               </div>
               <div className="rightbarFollowing">
-                <img src={PF+"/person/2.jpg"} alt="" className="rightbarFollowingImg" />
+                <img src={PF+"person/2.jpg"} alt="" className="rightbarFollowingImg" />
                 <span className="rightbarFollowingName">
                   John Carter
                 </span>
               </div>
               <div className="rightbarFollowing">
-                <img src={PF+"/person/3.jpg"} alt="" className="rightbarFollowingImg" />
+                <img src={PF+"person/3.jpg"} alt="" className="rightbarFollowingImg" />
                 <span className="rightbarFollowingName">
                   John Carter
                 </span>

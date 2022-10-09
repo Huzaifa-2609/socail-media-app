@@ -39,7 +39,7 @@ const fetchUser=async()=>{
             <div className="postTop">
                 <div className="postTopLeft">
                     <Link to={`/profile/${user.username}`}>
-                    <img src={user.profilePic? PF+ user.profilePic : PF+"/person/default-user.png"} alt="" className="postProfilePic" />
+                    <img src={user.profilePic? PF+ user.profilePic : PF+"person/default-user.png"} alt="" className="postProfilePic" />
                     </Link>
                     <span className="postUsername">{user.username}</span>
                     <span className="postDate">{format(post.createdAt)}</span>
@@ -54,8 +54,8 @@ const fetchUser=async()=>{
             </div>
             <div className="postBottom">
                 <div className="postBottomLeft">
-                    <img src={PF+"/reacts/like.png"} onClick={likeHandler} alt="" className="likeIcon" />
-                    <img src={PF+"/reacts/love.png"} onClick={likeHandler} alt="" className="likeIcon" />
+                    <img src={PF+"reacts/like.png"} onClick={likeHandler} alt="" className="likeIcon" />
+                    <img src={PF+"reacts/love.png"} onClick={likeHandler} alt="" className="likeIcon" />
                     <span  className="postLikeCounter">{like} reactions</span>
                 </div>
                 <div className="postBottomRight">

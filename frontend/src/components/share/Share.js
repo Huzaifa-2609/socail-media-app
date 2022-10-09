@@ -35,7 +35,7 @@ const Share = () => {
             src={
               user.profilePic
                 ? PF + user.profilePic
-                : PF + "/person/default-user.png"
+                : PF + "person/default-user.png"
             }
             alt=""
             className="shareProfileImg"
