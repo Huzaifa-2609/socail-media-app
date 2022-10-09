@@ -1,17 +1,34 @@
+import axios from "axios";
 import { useRef } from "react";
 import "./register.css";
+import {useNavigate} from "react-router-dom"
 
 export default function Register() {
   const username= useRef();
   const email= useRef();
   const password= useRef();
   const Apassword= useRef();
+  const navigate= useNavigate()
 
-  const handleClick=(e)=>{
+  const handleClick=async(e)=>{
     e.preventDefault();
     if(password.current.value!==Apassword.current.value){
       password.current.setCustomValidity("Passwords don't match")
     }
+    else{
+      const user={
+        username:username.current.value,
+        email:email.current.value,
+        password:password.current.value,
+      }
+      try{
+           await axios.post("/auth/register", user);
+           navigate("/login")
+      }catch(err){
+        console.log(err)
+      }
+    }
+
   }
   return (
     <div className="login">
